@@ -13,7 +13,7 @@ Please download and install LLVM from https://github.com/llvm/llvm-project/relea
 `VS2017\install.bat` can be used to install (may require Administrator privilege) MSBuild script for Visual Studio 2017, 2019, 2022 and 2026.
 
 ### Visual Studio 2026
-The Platform Toolset are "LLVM for Visual Studio 2026 (`LLVM_v145`)", "LLVM for Visual Studio 2022 (`LLVM_v143`)", "LLVM for Visual Studio 2019 (`LLVM_v142`)" and "LLVM for Visual Studio 2017 (`LLVM_v141`)" and  "LLVM for Visual Studio 2017 - Windows XP (`LLVM_v141_xp`)".
+The Platform Toolset are "LLVM for Visual Studio 2026 (`LLVM_v145`)", "LLVM for Visual Studio 2022 (`LLVM_v143`)", "LLVM for Visual Studio 2019 (`LLVM_v142`)" and "LLVM for Visual Studio 2017 (`LLVM_v141`)".
 
 Assume `VS_PATH` is your Visual Studio 2026 installation path (e.g.: `C:\Program Files\Microsoft Visual Studio\18\Community`), please manually copy folders under `VS2017` to their target paths.
 
@@ -35,9 +35,7 @@ Assume `VS_PATH` is your Visual Studio 2026 installation path (e.g.: `C:\Program
 |`VS2017\LLVM_v142` | `%VS_PATH%\MSBuild\Microsoft\VC\v160\Platforms\ARM64\PlatformToolsets\` |
 |`VS2017\LLVM` | `%VS_PATH%\MSBuild\Microsoft\VC\v150\` |
 |`VS2017\LLVM_v141` | `%VS_PATH%\MSBuild\Microsoft\VC\v150\Platforms\x64\PlatformToolsets\` |
-|`VS2017\LLVM_v141_xp` | `%VS_PATH%\MSBuild\Microsoft\VC\v150\Platforms\x64\PlatformToolsets\` |
 |`VS2017\LLVM_v141` | `%VS_PATH%\MSBuild\Microsoft\VC\v150\Platforms\Win32\PlatformToolsets\` |
-|`VS2017\LLVM_v141_xp` | `%VS_PATH%\MSBuild\Microsoft\VC\v150\Platforms\Win32\PlatformToolsets\` |
 |`VS2017\LLVM_v141` | `%VS_PATH%\MSBuild\Microsoft\VC\v150\Platforms\ARM64\PlatformToolsets\` |
 
 ### Visual Studio 2022
