@@ -56,6 +56,11 @@ IF EXIST llvm-bitcode-strip.exe (
 	MKLINK llvm-bitcode-strip.exe llvm-objcopy.exe
 )
 
+IF EXIST llvm-extract-bundle-entry.exe (
+	DEL llvm-extract-bundle-entry.exe
+	MKLINK llvm-extract-bundle-entry.exe llvm-objcopy.exe
+)
+
 IF EXIST llvm-install-name-tool.exe (
 	DEL llvm-install-name-tool.exe
 	MKLINK llvm-install-name-tool.exe llvm-objcopy.exe
@@ -141,6 +146,11 @@ IF EXIST _lldb.cp310-win32.pyd (
 IF EXIST native\_lldb.abi3None (
 	DEL native\_lldb.abi3None
 	MKLINK native\_lldb.abi3None ..\..\..\bin\liblldb.dll
+)
+@rem LLVM 23.1.0
+IF EXIST native\_lldb.pyd (
+	DEL native\_lldb.pyd
+	MKLINK native\_lldb.pyd ..\..\..\bin\liblldb.dll
 )
 
 DEL lldb-argdumper.exe
