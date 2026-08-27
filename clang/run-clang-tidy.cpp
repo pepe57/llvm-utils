@@ -364,6 +364,7 @@ inline bool PathIsFile(const wchar_t *path) noexcept {
 bool FindClangTidyPath() {
 	wchar_t dir[MAX_PATH]{};
 	GetModuleFileNameW(nullptr, dir, _countof(dir));
+	PathRemoveFileSpecW(dir);
 	wchar_t path[MAX_PATH]{};
 	PathCombineW(path, dir, L"clang-tidy.exe");
 	if (PathIsFile(path)) {
