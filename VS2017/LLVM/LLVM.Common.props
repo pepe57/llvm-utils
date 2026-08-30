@@ -3,10 +3,11 @@
     <OfficialLLVMInstallDir>$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\LLVM\LLVM)</OfficialLLVMInstallDir>
     <OfficialLLVMInstallDir Condition="'$(OfficialLLVMInstallDir)' == ''">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\LLVM\LLVM)</OfficialLLVMInstallDir>
     <LLVMInstallDir Condition="Exists('$(OfficialLLVMInstallDir)\bin\clang-cl.exe')">$(OfficialLLVMInstallDir)</LLVMInstallDir>
-    <ClangClExecutable>$(LLVMInstallDir)\bin\clang-cl.exe</ClangClExecutable>
-    <LldLinkExecutable>$(LLVMInstallDir)\bin\lld-link.exe</LldLinkExecutable>
-    <LlvmLibExecutable>$(LLVMInstallDir)\bin\llvm-lib.exe</LlvmLibExecutable>
-    <LlvmRcExecutable>$(LLVMInstallDir)\bin\llvm-rc.exe</LlvmRcExecutable>
+    <ExecutablePath>$(LLVMInstallDir)\bin;$(ExecutablePath)</ExecutablePath>
+    <ClangClExecutable>clang-cl.exe</ClangClExecutable>
+    <LldLinkExecutable>lld-link.exe</LldLinkExecutable>
+    <LlvmLibExecutable>llvm-lib.exe</LlvmLibExecutable>
+    <LlvmRcExecutable>llvm-rc.exe</LlvmRcExecutable>
     <UseClangCl>true</UseClangCl>
     <UseLldLink>false</UseLldLink>
     <UseLlvmLib>false</UseLlvmLib>
